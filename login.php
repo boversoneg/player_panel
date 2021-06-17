@@ -100,6 +100,7 @@
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Zaloguj">
             </div>
+            <p>Nie masz konta? <a href="register.php">zarejestruj się</a>.</p>
         </form>
     </div>
 </body>
