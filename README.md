@@ -8,6 +8,6 @@ You can change table name and information in **welcome.php** and **config.php**
 - [x] Login panel
 - [x] Welcome page
 - [x] Password reset
-- [x] Register page
+- [ ] Register page
 - [ ] Player panel
 - [ ] Dark mode
