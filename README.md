@@ -1,2 +1,4 @@
 # player_panel
-MTA:SA PHP + MySQL player panel
+Player Panel with MySQL connection
+
+-- usage -- 
