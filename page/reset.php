@@ -62,7 +62,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <title>Zmiana hasła</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <style>
-            body{ font: 14px sans-serif; }
+            body{ font: 14px sans-serif; text-align: center; }
             .wrapper{ width: 360px; padding: 20px; }
             .dark-mode {
                     background-color: #1a1919;
@@ -71,25 +71,23 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         </style>
     </head>
     <body>
-        <div class="wrapper">
-            <h2>Zmiana hasła</h2>
-            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post"> 
-                <div class="form-group">
-                    <label>Nowe hasło</label>
-                    <input type="password" name="new_password" class="form-control <?php echo (!empty($new_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $new_password; ?>">
-                    <span class="invalid-feedback"><?php echo $new_password_err; ?></span>
-                </div>
-                <div class="form-group">
-                    <label>Potwierdź hasło</label>
-                    <input type="password" name="confirm_password" class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>">
-                    <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
-                </div>
-                <div class="form-group">
-                    <input type="submit" class="btn btn-primary" value="Zmień">
-                    <a class="btn btn-link ml-2" href="welcome.php">Anuluj</a>
-                </div>
-            </form>
-        </div>    
+        <h2>Zmiana hasła</h2>
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post"> 
+            <div class="form-group">
+                <label>Nowe hasło</label><br>
+                <input type="password" style='width: 360px; vertical-align: middle; display:table-cell;' name="new_password" class="form-control <?php echo (!empty($new_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $new_password; ?>">
+                <span class="invalid-feedback"><?php echo $new_password_err; ?></span>
+            </div>
+            <div class="form-group">
+                <label>Potwierdź hasło</label><br>
+                <input type="password" style='width: 360px; vertical-align: middle; display:table-cell;' name="confirm_password" class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>">
+                <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Zmień">
+                <a class="btn btn-link ml-2" href="welcome.php">Anuluj</a>
+            </div>
+        </form>  
     </body>
     <script>
         (function() {
