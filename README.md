@@ -10,4 +10,5 @@ You can change table name and information in **welcome.php** and **config.php**
 - [x] Password reset
 - [x] Register page
 - [ ] Player panel
-- [ ] Dark mode
+- [ ] Integrated chat
+- [x] Dark mode
