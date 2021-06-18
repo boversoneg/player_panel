@@ -7,7 +7,7 @@ You can change table name and information in **welcome.php** and **config.php**
 # Functions
 - [x] Login panel
 - [x] Welcome page
-- [x] Password reset
+- [x] Change password
 - [x] Register page
 - [ ] Player panel
 - [ ] Integrated chat
