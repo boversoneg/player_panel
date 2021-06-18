@@ -78,35 +78,43 @@
                 background-color: #1a1919;
                 color: white;
             }
+
+            .centerscreen {
+                position: absolute;
+                top:0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                
+                margin: auto;
+            }
         </style>
     </head>
     <body>
-        <div class="wrapper">
-            <h2>Panel logowania</h2>
+        <h2>Panel logowania</h2>
 
-            <?php 
+        <?php 
             if(!empty($login_err)){
                 echo '<div class="alert alert-danger">' . $login_err . '</div>';
             }        
-            ?>
+        ?>
 
-            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-                <div class="form-group">
-                    <label>Nazwa użykownika</label>
-                    <input type="text" name="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
-                    <span class="invalid-feedback"><?php echo $username_err; ?></span>
-                </div>    
-                <div class="form-group">
-                    <label>Hasło</label>
-                    <input type="password" name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
-                    <span class="invalid-feedback"><?php echo $password_err; ?></span>
-                </div>
-                <div class="form-group">
-                    <input type="submit" class="btn btn-primary" value="Zaloguj">
-                </div>
-                <p>Nie masz konta? <a href="register.php">zarejestruj się</a>.</p>
-            </form>
-        </div>
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+            <div class="form-group">
+                <label>Nazwa użykownika</label><br>
+                <input type="text" style='width: 360px; vertical-align: middle; display:table-cell;' name="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
+                <span class="invalid-feedback"><?php echo $username_err; ?></span>
+            </div>    
+            <div class="form-group">
+                <label>Hasło</label><br>
+                <input type="password" style='width: 360px; vertical-align: middle; display:table-cell;' name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
+                <span class="invalid-feedback"><?php echo $password_err; ?></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Zaloguj">
+            </div>
+            <p>Nie masz konta? <a href="register.php">zarejestruj się</a>.</p>
+        </form>
     </body>
     <script type="text/javascript" id="cookieinfo" src="//cookieinfoscript.com/js/cookieinfo.min.js" data-message="Używamy plików cookie, aby poprawić Twoje wrażenia. Kontynuując odwiedzanie tej strony, zgadzasz się na używanie przez nas plików cookie." data-linkmsg="Więcej informacji."></script>
     <script>
